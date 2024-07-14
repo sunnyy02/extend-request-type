@@ -7,3 +7,6 @@ export const router = Router()
 
 router.get("/", handleLanguageHeader, HelloWorldController.default)
 router.get("/hello", handleTokenBasedAuthentication, HelloWorldController.hello)
+router.get("/user/:userId", handleLanguageHeader, HelloWorldController.getUserById)
+router.post('/user',handleLanguageHeader, HelloWorldController.createUser)
+router.get("/search", handleLanguageHeader, HelloWorldController.searchUsers)
